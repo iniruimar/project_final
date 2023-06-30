@@ -1,0 +1,16 @@
+tree("Root")
+	fallback
+		tree("ChasePlayer")
+		tree("Patroll")
+
+tree("ChasePlayer")
+	sequence
+		CanSee
+		SetDestination_Player
+		MoveToDestination
+		Fire
+		
+tree("Patroll")
+	sequence
+		SetDestination_Random
+		MoveToDestination

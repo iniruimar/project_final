@@ -1,0 +1,22 @@
+tree("Root")
+	fallback
+		tree("ChasePlayer")
+		tree("GoBack")
+
+tree("ChasePlayer")
+	while 
+		CanSee
+		sequence
+			SetDestination_Player
+			MoveToDestination
+			MoveOtherAgent
+		
+
+tree("GoBack")
+	while
+		not CanSee
+		sequence
+			Wait 30.0
+			sequence
+				GoBack
+				MoveToDestination
